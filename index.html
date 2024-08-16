@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חבילות בר מצווה - ד"ר בר מצווה</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-image: url('https://thekotel.org/wp-content/uploads/2023/05/347115675_789612722461419_9135832163369076473_n.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #4a4a4a;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .logo-image {
+            width: 100%;
+            height: 70%;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: #4a4a4a;
+        }
+        
+        .logo-text {
+            width: 100%;
+            height: 30%;
+            background-color: #f9d3c5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+        
+        .logo-stars {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        /* Rest of the styles remain unchanged */
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #8B4513;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .packages {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 2rem;
+        }
+        
+        .package {
+            background-color: rgba(255, 253, 240, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            padding: 2rem;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .package.featured {
+            transform: scale(1.05);
+            border: 2px solid #D4AF37;
+        }
+        
+        .package h2 {
+            color: #8B4513;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .package .icon {
+            font-size: 3rem;
+            color: #D2691E;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .package ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        
+        .package li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .package li i {
+            color: #D2691E;
+            margin-left: 0.5rem;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem 0;
+            color: #8B4513;
+        }
+        
+        .gift {
+            font-style: italic;
+            text-align: center;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid #D2691E;
+            color: #A0522D;
+        }
+        
+        .cta-button {
+            background-color: #D2691E;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            background-color: #8B4513;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 1024px) {
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package {
+                width: 100%;
+                max-width: 400px;
+            }
+            .package.featured {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">
+                <div class="logo-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="logo-text">ד"ר בר מצווה</div>
+                <div class="logo-stars">★ ★ ★</div>
+            </div>
+        </div>
+        <h1>החבילות שלנו</h1>
+        <div class="packages">
+            <!-- Package content remains unchanged -->
+            <div class="package">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                <h2>חבילת קלאסיק</h2>
+                <div class="price">1900 ₪</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> 2 גנים + קישוטים</li>
+                    <li><i class="fas fa-check"></i> תעודת בר מצווה מהודרת</li>
+                    <li><i class="fas fa-check"></i> טקס קבלת עול מצוות מכובד</li>
+                    <li><i class="fas fa-check"></i> כניסה מרשימה לאולם לכלת השמחה</li>
+                    <li><i class="fas fa-check"></i> מסיבת סיום לכל באי האולם</li>
+                </ul>
+                <div class="gift">מתנה מיוחדת: המדריך לארגון בר מצווה בכותל בכוחות עצמכם</div>
+                <a href="#" class="cta-button">קנה עכשיו</a>
+            </div>
+            <div class="package featured">
+                <div class="icon"><i class="fas fa-crown"></i></div>
+                <h2>חבילת פרימיום</h2>
+                <div class="price">19500 ₪</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> כל מה שכלול בחבילת אקסקלוסיב</li>
+                    <li><i class="fas fa-check"></i> פגישה אישית עם השף ובניית תפריט מותאם</li>
+                    <li><i class="fas fa-check"></i> איפור מקצועי לחוגגים נוספים (עד 5)</li>
+                    <li><i class="fas fa-check"></i> עיצוב בלונים בסטנדרט גבוה</li>
+                    <li><i class="fas fa-check"></i> במה ייחודית ותאורה מתקדמת</li>
+                    <li><i class="fas fa-check"></i> צילום מגנטים לכל האורחים</li>
+                    <li><i class="fas fa-check"></i> DJ לאירוע כולו</li>
+                    <li><i class="fas fa-check"></i> אירוח מלא למבוגרים וילדים</li>
+                    <li><i class="fas fa-check"></i> מזכרות מותאמות אישית לכל אורח</li>
+                    <li><i class="fas fa-check"></i> אזור VIP להורים ולאורחים מרכזיים</li>
+                </ul>
+                <div class="gift">מתנה מיוחדת: מצגת להקרנה במסעדה על חתן בר המצווה ומשפחתו</div>
+                <a href="#" class="cta-button">קנה עכשיו</a>
+            </div>
+            <div class="package">
+                <div class="icon"><i class="fas fa-gem"></i></div>
+                <h2>חבילת אקסקלוסיב</h2>
+                <div class="price">10500 ₪</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> כל מה שכלול בחבילת קלאסיק</li>
+                    <li><i class="fas fa-check"></i> ליווי אישי לאורך כל האירוע</li>
+                    <li><i class="fas fa-check"></i> עיצוב מיתוג ייחודי לאירוע</li>
+                    <li><i class="fas fa-check"></i> איפור מקצועי לאם ולחוגגת</li>
+                    <li><i class="fas fa-check"></i> איפור לחוגגים נוספים (עד 3)</li>
+                    <li><i class="fas fa-check"></i> בוק תמונות אומנותי</li>
+                    <li><i class="fas fa-check"></i> צלם ווידאו יוקרתי</li>
+                    <li><i class="fas fa-check"></i> מתנות אישיות לכל האורחים</li>
+                    <li><i class="fas fa-check"></i> קליפ ייחודי בסוף האירוע</li>
+                    <li><i class="fas fa-check"></i> טקס סיום מיוחד</li>
+                </ul>
+                <div class="gift">מתנה מיוחדת: סידור תפילה מיוחד</div>
+                <a href="#" class="cta-button">קנה עכשיו</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
